@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Actualizar palabra y significado</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Actualizar palabra</h1>
+
+    <div class="form">
+        <form action="/update/{{word.id}}" method="POST">
+            <input type="text" name="word" id="word" value="{{word.word}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+    <div class="form">
+        <form action="/update/{{word.id}}" method="POST">
+            <input type="text" name="meaning" id="meaning" value="{{word.meaning}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>
+{% endblock %}
